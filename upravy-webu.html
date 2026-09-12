@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth bg-[#050505] text-[#EFEFEF] antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Úpravy a vylepšení webových stránek | Stránky Svoboda</title>
+    <meta name="description" content="Nefunguje váš web správně, je pomalý nebo vypadá zastarale? Provedu profesionální úpravu, zrychlení a opravu chyb, aby vám web znovu přiváděl zákazníky.">
+    <link rel="canonical" href="https://strankysvoboda.cz/upravy-webu.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Úpravy a vylepšení webových stránek | Stránky Svoboda">
+    <meta property="og:description" content="Profesionální péče o váš web: modernizace vzhledu, zrychlení a opravy chyb pro běžné uživatele i firmy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://strankysvoboda.cz/upravy-webu.html">
+    <meta property="og:image" content="https://strankysvoboda.cz/og-image-upravy.jpg">
+    <meta property="og:locale" content="cs_CZ">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Úpravy a vylepšení webových stránek | Stránky Svoboda">
+    <meta name="twitter:description" content="Profesionální péče o váš web: modernizace vzhledu, zrychlení a opravy chyb.">
+    <meta name="twitter:image" content="https://strankysvoboda.cz/og-image-upravy.jpg">
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Cpath d='M30 30h40v40H30z' fill='white'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="output.css">
+
+    <!-- Základní vizuální identita -->
+    <style>
+        :root {
+            --grid-color: rgba(255, 255, 255, 0.06);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        ::selection {
+            background-color: #EFEFEF;
+            color: #050505;
+        }
+
+        .grid-lines {
+            background-image: 
+                linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+                linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+            background-size: 100px 100px;
+            background-position: center top;
+        }
+
+        .border-grid {
+            border-color: var(--grid-color);
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal-text {
+                clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+                opacity: 0;
+                transform: translateY(20px);
+                animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+            }
+            .delay-1 { animation-delay: 0.1s; }
+            .delay-2 { animation-delay: 0.2s; }
+            .delay-3 { animation-delay: 0.4s; }
+            
+            @keyframes reveal {
+                0% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); opacity: 0; transform: translateY(20px); }
+                100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); opacity: 1; transform: translateY(0); }
+            }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 grid-lines opacity-50 pointer-events-none z-[-1]" aria-hidden="true"></div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full bg-[#050505]/90 backdrop-blur-md border-b border-grid transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <span class="font-display font-bold text-xl tracking-tight text-white uppercase hover:opacity-70 transition-opacity">Svoboda.</span>
+            </a>
+            
+            <nav aria-label="Hlavní navigace" class="hidden md:flex items-center gap-8">
+                <a href="index.html#jak-to-funguje" class="text-sm text-[#737373] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Jak to funguje</a>
+                <a href="index.html#pristup" class="text-sm text-[#737373] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Můj přístup</a>
+                
+                <div class="group relative">
+                    <button aria-haspopup="true" aria-expanded="false" class="flex items-center gap-2 text-sm text-white transition-colors py-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                        Služby
+                        <span class="w-1.5 h-1.5 bg-white transition-colors"></span>
+                    </button>
+                    <!-- Dropdown -->
+                    <div class="absolute top-full right-0 pt-4 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all origin-top z-50">
+                        <div class="bg-[#050505] border border-grid flex flex-col shadow-2xl shadow-black">
+                            <a href="tvorba-webu.html" class="block px-5 py-4 text-sm text-[#737373] border-b border-grid hover:bg-white hover:text-black transition-colors focus-visible:outline-none focus-visible:bg-white focus-visible:text-black">Nové webové stránky</a>
+                            <!-- Aktivní stav -->
+                            <a href="upravy-webu.html" aria-current="page" class="flex items-center justify-between px-5 py-4 text-sm text-white bg-white/5 border-b border-grid focus-visible:outline-none focus-visible:bg-white focus-visible:text-black">
+                                Úpravy a vylepšení
+                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                            </a>
+                            <a href="seo.html" class="block px-5 py-4 text-sm text-[#737373] hover:bg-white hover:text-black transition-colors focus-visible:outline-none focus-visible:bg-white focus-visible:text-black">Viditelnost ve vyhledávačích</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#kontakt" class="border border-white text-white px-6 py-2.5 text-sm font-medium hover:bg-white hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">
+                    Začít spolupráci
+                </a>
+            </nav>
+
+            <button id="menu-toggle" type="button" aria-label="Otevřít menu" class="md:hidden p-2 text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="square" stroke-linejoin="miter" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobilní menu -->
+    <div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-[#050505]">
+        <div class="flex flex-col h-full px-6 pt-28 pb-12">
+            <nav aria-label="Mobilní navigace" class="flex flex-col gap-6 text-2xl font-display">
+                <a href="tvorba-webu.html" class="text-[#737373] hover:text-white transition-colors pb-4 border-b border-grid">Nové webové stránky</a>
+                <!-- Aktivní stránka -->
+                <a href="upravy-webu.html" aria-current="page" class="text-white pb-4 border-b border-grid flex justify-between items-center">
+                    Úpravy a vylepšení
+                    <span class="w-2 h-2 bg-white rounded-full"></span>
+                </a>
+                <a href="seo.html" class="text-[#737373] hover:text-white transition-colors pb-4 border-b border-grid">Viditelnost ve vyhledávačích</a>
+                <a href="#kontakt" class="mt-8 bg-white text-black px-6 py-4 text-center text-lg font-medium">Nezávazná poptávka</a>
+            </nav>
+            <button id="close-menu" class="absolute top-6 right-6 p-2 text-white">
+                <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8"><path stroke-linecap="square" stroke-linejoin="miter" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+        </div>
+    </div>
+
+    <main class="flex-grow">
+        <!-- HERO SEKCE -->
+        <section class="border-b border-grid relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 py-24 md:py-32 flex flex-col lg:flex-row items-center gap-12 relative">
+                
+                <div class="w-full lg:w-2/3 z-10">
+                    <div class="reveal-text delay-1 flex items-center gap-4 mb-8 text-[#737373] text-xs uppercase tracking-widest font-medium">
+                        <span>Služby</span>
+                        <span class="w-8 h-px bg-white/20"></span>
+                        <span>Opravy a modernizace</span>
+                    </div>
+                    
+                    <h1 class="reveal-text delay-2 font-display text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
+                        Vdechněte webu <br>
+                        <span class="italic font-normal text-[#737373]">druhý dech.</span>
+                    </h1>
+                    
+                    <p class="reveal-text delay-3 text-lg md:text-xl text-[#A3A3A3] mb-12 leading-relaxed max-w-[50ch]">
+                        Pokud váš web působí zastarale, nefunguje správně na mobilních telefonech nebo se pomalu načítá, zbytečně přicházíte o zákazníky. Zjistím, kde je problém, web opravím a dám mu moderní vzhled.
+                    </p>
+                    
+                    <div class="reveal-text delay-3">
+                        <a href="#kontakt" class="inline-block bg-white text-black px-8 py-4 text-sm font-medium hover:bg-[#EFEFEF] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">
+                            Nezávazně zkonzultovat
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRID SLUŽEB -->
+        <section class="border-b border-grid relative bg-[#0A0A0A]">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    
+                    <div class="p-8 md:p-12 border-b md:border-r border-grid hover:bg-[#111] transition-colors">
+                        <div class="text-[11px] font-medium tracking-widest uppercase text-[#737373] mb-8 flex justify-between items-center">
+                            <span>Krok 01</span>
+                            <span>Vzhled a srozumitelnost</span>
+                        </div>
+                        <h2 class="font-display text-2xl font-bold text-white mb-4">Líbivý a moderní vzhled</h2>
+                        <p class="text-[#A3A3A3] text-sm leading-relaxed max-w-[45ch]">
+                            Upravím váš web tak, aby působil aktuálně, důvěryhodně a profesionálně. Zaměřím se na to, aby se na něm návštěvníci snadno vyznali a rychle našli přesně to, co potřebují.
+                        </p>
+                    </div>
+
+                    <div class="p-8 md:p-12 border-b border-grid hover:bg-[#111] transition-colors">
+                        <div class="text-[11px] font-medium tracking-widest uppercase text-[#737373] mb-8 flex justify-between items-center">
+                            <span>Krok 02</span>
+                            <span>Rychlost a plynulost</span>
+                        </div>
+                        <h2 class="font-display text-2xl font-bold text-white mb-4">Zrychlení načítání webu</h2>
+                        <p class="text-[#A3A3A3] text-sm leading-relaxed max-w-[45ch]">
+                            Pomalý web zákazníky odrazuje. Odstraním zbytečnosti, které vaše stránky brzdí, aby se vše načítalo okamžitě a bez čekání. Zabráníte tak tomu, že lidé odejdou dřív, než si něco přečtou.
+                        </p>
+                    </div>
+
+                    <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-grid hover:bg-[#111] transition-colors">
+                        <div class="text-[11px] font-medium tracking-widest uppercase text-white mb-8 flex justify-between items-center">
+                            <span>Krok 03</span>
+                            <span class="text-[#737373]">Oprava nefunkčností</span>
+                        </div>
+                        <h2 class="font-display text-2xl font-bold text-white mb-4">Odstranění technických chyb</h2>
+                        <p class="text-[#A3A3A3] text-sm leading-relaxed max-w-[45ch]">
+                            Neodesílají se vám z webu poptávky? Zobrazuje se stránka na některých telefonech špatně? Najdu pravou příčinu těchto problémů a postarám se o to, aby vše fungovalo bezchybně.
+                        </p>
+                    </div>
+
+                    <div class="p-8 md:p-12 hover:bg-[#111] transition-colors">
+                        <div class="text-[11px] font-medium tracking-widest uppercase text-[#737373] mb-8 flex justify-between items-center">
+                            <span>Krok 04</span>
+                            <span>Rozvoj a nové funkce</span>
+                        </div>
+                        <h2 class="font-display text-2xl font-bold text-white mb-4">Rozšíření vašeho webu</h2>
+                        <p class="text-[#A3A3A3] text-sm leading-relaxed max-w-[45ch]">
+                            Roste vaše podnikání a potřebujete na web přidat nové podstránky, další jazykovou verzi, nebo ho propojit s jiným systémem? Postarám se o to, aby váš web rostl spolu s vámi.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER & KONTAKT -->
+    <footer id="kontakt" class="bg-[#050505] text-[#A3A3A3] relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2">
+                
+                <!-- Formulář -->
+                <div class="p-6 md:p-12 lg:py-24 lg:px-12 border-b lg:border-b-0 lg:border-r border-grid">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+                        S jakým webem<br>potřebujete pomoci?
+                    </h2>
+                    <p class="mb-12 max-w-[45ch] text-sm leading-relaxed">
+                        Pošlete mi odkaz a stručně mi napište, co vás trápí. Zjistím, v jakém stavu se web nachází, a brzy se vám ozvu s návrhem, jak ho můžeme vylepšit.
+                    </p>
+                    
+                    <form id="contact-form" class="space-y-8" onsubmit="return handleContactSubmit(event)">
+                        
+                        <div class="relative">
+                            <label for="url" class="text-xs uppercase tracking-wider text-[#737373] mb-2 block">Odkaz na váš současný web</label>
+                            <input type="url" id="url" name="url" placeholder="www.vasespolecnost.cz" 
+                                class="w-full bg-transparent border-0 border-b border-grid py-2 px-0 text-white focus:ring-0 focus:border-white transition-colors placeholder:text-[#333] outline-none">
+                        </div>
+
+                        <div class="relative">
+                            <label for="email" class="text-xs uppercase tracking-wider text-[#737373] mb-2 block">Váš e-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="abychom se mohli spojit"
+                                class="w-full bg-transparent border-0 border-b border-grid py-2 px-0 text-white focus:ring-0 focus:border-white transition-colors placeholder:text-[#333] outline-none">
+                        </div>
+                        
+                        <div class="relative">
+                            <label for="message" class="text-xs uppercase tracking-wider text-[#737373] mb-2 block">S čím přesně potřebujete pomoci?</label>
+                            <textarea id="message" name="message" rows="4" required placeholder="Např.: Web se pomalu načítá, nezobrazuje se dobře na mobilu..."
+                                class="w-full bg-transparent border-0 border-b border-grid py-2 px-0 text-white focus:ring-0 focus:border-white transition-colors resize-none outline-none"></textarea>
+                        </div>
+                        
+                        <input type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" class="sr-only">
+                        
+                        <div class="pt-4">
+                            <button type="submit" id="submit-btn" 
+                                class="border border-white bg-white text-black px-8 py-3 text-sm font-medium hover:bg-transparent hover:text-white transition-colors w-full sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">
+                                Odeslat k nezávaznému posouzení
+                            </button>
+                            <p id="form-status" aria-live="polite" class="text-sm text-white mt-4 h-5"></p>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Přímý kontakt -->
+                <div class="p-6 md:p-12 lg:py-24 lg:px-12 flex flex-col justify-between">
+                    <div class="space-y-12">
+                        <div>
+                            <h4 class="text-xs uppercase tracking-wider text-[#737373] mb-4">Napište mi</h4>
+                            <a href="mailto:ahoj@strankysvoboda.cz" class="font-display text-2xl md:text-3xl text-white hover:opacity-70 transition-opacity block w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                                ahoj@strankysvoboda.cz
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xs uppercase tracking-wider text-[#737373] mb-4">Zavolejte mi</h4>
+                            <a href="tel:+420000000000" class="font-display text-2xl md:text-3xl text-white hover:opacity-70 transition-opacity block w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                                +420 000 000 000
+                            </a>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xs uppercase tracking-wider text-[#737373] mb-4">Kde mě najdete</h4>
+                            <p class="font-display text-xl text-white">Brno (nebo online odkudkoliv)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-grid p-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-[#737373]">
+                <p>&copy; <span id="year"></span> Stránky Svoboda. Vytvořeno s pečlivostí a důrazem na detail.</p>
+                <div class="flex gap-6">
+                    <a href="ochrana-udaju.html" class="hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white">Ochrana osobních údajů</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script defer>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        const menuToggle = document.getElementById('menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            document.body.style.overflow = isHidden ? '' : 'hidden';
+            menuToggle.setAttribute('aria-expanded', !isHidden);
+        }
+
+        if (menuToggle && closeMenu && mobileMenu) {
+            menuToggle.addEventListener('click', toggleMenu);
+            closeMenu.addEventListener('click', toggleMenu);
+            
+            menuLinks.forEach(link => {
+                link.addEventListener('click', toggleMenu);
+            });
+        }
+
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            const form = e.target;
+            const hp = form.querySelector('input[name="hp"]').value;
+            const status = document.getElementById('form-status');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            if (hp) return false;
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Zpracovávám požadavek...';
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                form.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50');
+                
+                status.textContent = 'Zpráva byla úspěšně odeslána. Brzy se vám ozvu.';
+                
+                setTimeout(() => { status.textContent = ''; }, 6000);
+            }, 1500);
+            
+            return false;
+        }
+    </script>
+</body>
+</html>

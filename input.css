@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+html, body {
+    -ms-overflow-style: none;  /* Internet Explorer a starý Edge */
+    scrollbar-width: none;     /* Firefox, LibreWolf a novější prohlížeče */
+}
+            
+html::-webkit-scrollbar, body::-webkit-scrollbar { 
+    display: none;             /* Chrome, Safari, Opera a všechny mobily (iOS/Android) */
+}
