@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth bg-[#050505] text-[#EFEFEF] antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stránka nenalezena | Stránky Svoboda</title>
+    <meta name="description" content="Hledaná stránka neexistuje.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Cpath d='M30 30h40v40H30z' fill='white'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="output.css">
+    <style>
+        :root { --grid-color: rgba(255, 255, 255, 0.07); }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-display { font-family: 'Space Grotesk', sans-serif; }
+        ::selection { background-color: #EFEFEF; color: #050505; }
+        .grid-lines { background-image: linear-gradient(to right, var(--grid-color) 1px, transparent 1px), linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px); background-size: 100px 100px; background-position: center top; }
+        .border-grid { border-color: rgba(255, 255, 255, 0.12); }
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal-text { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); opacity: 0; transform: translateY(20px); animation: reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+            .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.4s; }
+            @keyframes reveal { 0% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); opacity: 0; transform: translateY(20px); } 100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); opacity: 1; transform: translateY(0); } }
+        }
+    </style>
+</head>
+<body class="relative min-h-screen flex flex-col">
+
+    <div class="fixed inset-0 grid-lines opacity-30 pointer-events-none z-[-1]" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-50 w-full bg-[#050505]/95 backdrop-blur-md border-b border-grid transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                <span class="font-display font-bold text-xl tracking-tight text-white uppercase hover:opacity-70 transition-opacity">Svoboda.</span>
+            </a>
+            
+            <nav aria-label="Hlavní navigace" class="hidden md:flex items-center gap-8">
+                <a href="index.html#sluzby" class="text-sm font-medium text-[#A3A3A3] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Služby</a>
+                <a href="index.html#ukazky" class="text-sm font-medium text-[#A3A3A3] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">Ukázky práce</a>
+                <a href="index.html#kontakt" class="border border-white text-white px-6 py-2.5 text-sm font-medium hover:bg-white hover:text-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#050505]">
+                    Požádat o zhodnocení
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="grow flex flex-col justify-center border-b border-grid relative py-20 min-h-[70vh]">
+        <div class="max-w-3xl mx-auto text-center px-6 relative z-10">
+            <div class="reveal-text delay-1 font-display text-8xl md:text-9xl font-bold text-white/10 mb-6 tracking-tighter select-none">404</div>
+            <h1 class="reveal-text delay-2 font-display text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">
+                Tato stránka tu bohužel není.
+            </h1>
+            <p class="reveal-text delay-3 text-lg text-[#A3A3A3] mb-12 leading-relaxed max-w-[45ch] mx-auto">
+                Omlouvám se, ale hledaná adresa byla pravděpodobně přesunuta do nové sekce úvodní stránky.
+            </p>
+            <div class="reveal-text delay-3">
+                <a href="index.html" class="inline-block border border-white bg-white text-black px-8 py-4 text-sm font-medium hover:bg-transparent hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white">
+                    Zpět na úvodní stranu
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#050505] text-[#A3A3A3] relative z-10 border-t border-grid p-6 flex justify-center">
+        <p class="text-sm">&copy; <span id="year"></span> Stránky Svoboda.</p>
+    </footer>
+
+    <script defer>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
